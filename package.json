@@ -1,0 +1,45 @@
+{
+  "name": "shoecatty",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js",
+    "dev": "npx tailwindcss -i ./public/css/style.css -o ./public/css/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThamsanqaMpontshane/shoe-catalogue-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThamsanqaMpontshane/shoe-catalogue-api/issues"
+  },
+  "homepage": "https://github.com/ThamsanqaMpontshane/shoe-catalogue-api#readme",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.7",
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "flowbite": "^1.5.3",
+    "mocha": "^10.1.0",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0",
+    "pg-promise": "^10.12.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
