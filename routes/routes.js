@@ -25,6 +25,8 @@ function theShoeCatalogue(shoes,db){
         }else if(myrange === "range3") {
             theShoes = await db.any(`SELECT * FROM shoes WHERE categoryofshoe = $1 AND colorofshoe = $2`,[gender, color,size]);
         }
+    }else {
+        theShoes = "";
     }
         res.render('index', {
             firstpage: theShoes
