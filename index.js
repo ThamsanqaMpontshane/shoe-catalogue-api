@@ -36,20 +36,27 @@ app.engine("handlebars", exphbs.engine({
 }));
 app.set("view engine", "handlebars");
 
+function errorHandler(err, req, res, next) {
+   if(err){
+    res.send(`<h1>Something went wrong</h1>`);
+   }
+}
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-
 app.use(express.static("public"));
 app.get('/', Routers.homeGet);
 app.post('/', Routers.homePost);
 app.post('/addShoe', Routers.addShoe);
-app.get('/addShoe', async function (req, res) {
+app.get('/addShoe',async function (req, res) {
     res.render('addShoe', {}
     );
 });
+app.get('/shoe/:id', Routers.shoeGet);
+app.use(errorHandler);
 // app.get('/category/:category', Routers.getShoesByCategory);
+
 // app.get('/male', async function (req, res) {
 //     const category =
 //     const theShoes = await shoes.filterShoesByCatego

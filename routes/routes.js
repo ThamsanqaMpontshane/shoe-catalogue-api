@@ -72,6 +72,13 @@ function theShoeCatalogue(shoes,db){
         // }
         res.redirect('/addShoe');
     }
+    // function to get the shoe
+    
+
+
+
+
+
     //function to get all the shoes in the catalogue database by category
     // async function getShoesByCategory(req, res, next) {
     //     const theCategory = req.params.category;
